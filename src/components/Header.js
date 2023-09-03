@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Header() {
+const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+        <h1>Expense Tracker</h1>
+    </div>
   )
 }
 
