@@ -28,8 +28,14 @@ export const GlobalProvider = ({children}) => {
             payload: id
         });
     }
-    return(<GlobalContext.Provider value={{transactions: state.transactions,
-    deleteTransaction}}>
-        
+
+    function addTransaction(transaction) {
+        dispatch({
+            type: 'ADD_TRANSACTION',
+            payload: transaction
+        });
+    }
+    return(<GlobalContext.Provider value={{transactions: state.transactions,deleteTransaction}}>
+        {children}
     </GlobalContext.Provider>);
 }
