@@ -14,8 +14,12 @@ const AddTransactionList = () => {
 
     //The Math.random() static method returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1,
     const newTransaction = {
-      id: Math.floor(Math.random() * 100000000)
+      id: Math.floor(Math.random() * 100000000),
+      text,
+      amount: +amount
     }
+
+    addTransaction(newTransaction);
   }
 
   return (
