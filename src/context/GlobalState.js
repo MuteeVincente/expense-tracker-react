@@ -35,7 +35,7 @@ export const GlobalProvider = ({children}) => {
             payload: transaction
         });
     }
-    return(<GlobalContext.Provider value={{transactions: state.transactions,deleteTransaction}}>
+    return(<GlobalContext.Provider value={{transactions: state.transactions,deleteTransaction,addTransaction}}>
         {children}
     </GlobalContext.Provider>);
 }
